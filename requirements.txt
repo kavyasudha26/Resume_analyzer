@@ -1,0 +1,7 @@
+# Dependencies
+
+## PyPDF2
+### Description
+A Python library for reading and writing PDF files
+### Version
+Latest version

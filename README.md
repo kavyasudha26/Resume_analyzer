@@ -1,45 +1,36 @@
+# AI-Powered Resume Screening System
 
-# AI-Powered Resume Screening and Ranking System
+A machine learning–driven system to parse, preprocess, and rank resumes against job descriptions using **Sentence-BERT embeddings** and **ML classifiers**. Includes an interactive **Streamlit web app** for visualization.
 
-This Python project implements a basic resume screening system that analyzes resumes against job descriptions to assess their suitability. The system:
+## Features
 
-*   Takes a job description as input from the user.
-*   Accepts a resume in PDF format.
-*   Extracts keywords from the job description (using basic stop word removal).
-*   Extracts text from the resume using PyPDF2.
-*   Matches keywords from the job description to the resume content.
-*   Calculates a score based on the number of keyword matches.
-*   Provides a basic analysis of the resume and its alignment with the job description.
+- Extracts text from PDF and DOCX resumes.
+- Preprocesses text: removes stopwords, emails, phone numbers, URLs, punctuation.
+- Computes semantic similarity using Sentence-BERT embeddings.
+- Predicts candidate-job match probability using Logistic Regression.
+- Ranks resumes based on combined similarity and ML probability.
+- Streamlit interface for easy upload and real-time results.
 
-## Tech Stack:
+## Tech Stack
 
-*   Python
-*   PyPDF2 (for PDF text extraction)
+- **Languages:** Python  
+- **Libraries:** Streamlit, Sentence-Transformers, Scikit-learn, pdfplumber, docx2txt, Numpy, Pandas, NLTK  
+- **Tools:** Git, Cloud (optional)
 
-## Installation:
+## Installation
 
-1.  Make sure you have Python installed (version 3.6 or higher).
-2.  Install the required libraries:
-    ```bash
-    pip install PyPDF2
-    ```
+1. Clone the repository:
+```bash
+git clone https://github.com/<your-username>/AI-Resume-Comparator.git
+cd AI-Resume-Comparator
 
-## Usage:
+Create a virtual environment:
+python -m venv venv
+venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
 
-1.  Clone this repository.
-2.  Run the `resume_analyzer.py` script:
-    ```bash
-    python resume_analyzer.py
-    ```
-3.  Follow the prompts to enter the job description and the path to the resume file.
+Install dependencies:
 
-## Potential Future Enhancements:
+pip install -r requirements.txt
 
-*   Improved keyword extraction using NLTK (stemming, lemmatization, TF-IDF).
-*   More sophisticated scoring algorithms.
-*   GUI using Tkinter or Gradio.
-*   Machine learning classification.
-
-## License:
-
-[Add a license here, e.g., MIT License]
+Run the Streamlit app
